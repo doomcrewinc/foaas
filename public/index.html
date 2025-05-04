@@ -3,12 +3,9 @@
   <head>
     <title>Fuck Off As A Service (FOAAS)</title>
 
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@foaas">
-    <meta name="twitter:creator" content="@TomDionysus">
-    <meta name="og:url" content="https://foaas.com">
+    <meta name="og:url" content="https://foaas.io">
     <meta name="og:title" content="Fuck Off As A Service">
     <meta name="og:description" content="FOAAS provides a modern, RESTful, scalable solution to the common problem of telling people to fuck off.">
 
@@ -23,11 +20,6 @@
             })
         });
     </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143325008-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-143325008-1');
-    </script>
   </head>
 
   <body style="">
@@ -35,7 +27,7 @@
       <div class="hero-unit">
         <h1>FOAAS</h1>
         <h2>Fuck Off As A Service</h2>
-        <p><em>v2.3.2</em></p>
+        <p><em>v2.3.3</em></p>
       </div>
     </div>
     <div class="container">
@@ -58,7 +50,7 @@
             </ul>
           </li>
           <li>text/html - Content will be returned as an HTML page with a twitter bootstrap hero unit, containing the message and the subtitle.</li>
-          <li>application/xml - Content will be returned as a XML document.</li>
+          <li>application/xml - Content will be returned as an XML document.</li>
         </ul>
 
         <h3 id="operations">Operations</h3>
@@ -78,31 +70,27 @@
                 <td>Will return a JSON list of operations with names and fields. <em>Note: JSON Only</em></td>
             </tr>
 
-            
+
         </table>
 
         <h3 id="filters">Filters</h3>
 
-        <p>Filters are optional output modifiers, and are specified by adding the filter name as query to the HTTP request, e.g. <a href="http://foaas.com/off/Tom/Everyone?shoutcloud">http://foaas.com/off/Tom/Everyone?<em>shoutcloud</em></a>.</p>
+        <p>Filters are optional output modifiers, and are specified by adding the filter name as query to the HTTP request, e.g. <a href="https://foaas.io/off/doomcrewinc/Everyone">https://foaas.io/off/doomcrewinc/Everyone</a>.</p>
 
-        <p><strong>Caveat: </strong>All filters internally call the stated external services, and as such the latency and availability of API calls using these features cannot be guaranteed.</p> 
+        <p><strong>Caveat: </strong>All filters internally call the stated external services, and as such the latency and availability of API calls using these features cannot be guaranteed.</p>
 
         <table class="table">
             <tr>
                 <th>Name</th>
                 <th>Description</th>
             </tr>
-            <tr>
-                <td>shoutcloud</td>
-                <td>Integration with the ShoutCloud service. Please see <a href="http://shoutcloud.io">shoutcloud.io</a> for details.</td>
-            </tr>
             <tr id='i18n'>
                 <td>i18n</td>
-                <td>Translation provided by <a href="http://mymemory.translated.net">mymemory.translated.net</a>. Specifying ?i18n on its own will attempt to detect your browser language, or you can specify the language to translate to using the ISO 639-1 language code, i.e. ?i18n=es</td>
+                <td>Translation provided by <a href="https://mymemory.translated.net">mymemory.translated.net</a>. Specifying ?i18n on its own will attempt to detect your browser language, or you can specify the language to translate to using the ISO 639-1 language code, i.e. ?i18n=es</td>
             </tr>
         </table>
 
-        <p>Filters can be used in combinations, e.g. <a href="http://foaas.com/off/Tom/Everyone?shoutcloud&amp;i18n=de">http://foaas.com/off/Tom/Everyone?<em>shoutcloud&amp;i18n=de</em></a></p>
+        <p>Filters can be used in combinations, e.g. <a href="https://foaas.io/off/doomcrew/Everyone&amp;i18n=de">https://foaas.io/off/doomcrewinc/Everyone?&amp;i18n=de</em></a></p>
 
         <h2 id="roadmap">Roadmap</h2>
 
@@ -114,14 +102,12 @@
 
         <p>All contributions are very welcome.</p>
 
-        <p><a href="https://twitter.com/foaas">Follow @foaas on twitter!</a></p>
-        <p><a href="https://github.com/tomdionysus/foaas">Fork me on github</a></p>
+        <p><a href="https://github.com/doomcrewinc/foaas">Fork me on github</a></p>
 
         <p>Created by <a href="https://twitter.com/TomDionysus">@TomDionysus</a></p>
-        <p>Maintained with loving Profanity by <a href="https://twitter.com/philip2156">@philip2156</a>, <a href="https://twitter.com/chris_beckett">@chris_beckett</a></p>
+        <p>Maintained with loving Profanity by <a href="https://github.com/doomcrewinc">doomcrewinc</a></p>
 
       </div>
     </div>
-    <script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-42551488-1","herokuapp.com"),ga("send","pageview"),ga('create','UA-42553958-1','foaas.com'),ga('send','pageview');</script>
   </body>
 </html>
