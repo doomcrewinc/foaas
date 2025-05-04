@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: cimg/node:23.11.0
     environment:
-      COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
+      SHELL: /bin/bash
     resource_class: small
     steps:
       - checkout
@@ -18,8 +18,9 @@ jobs:
       - run:
           name: Set COVERALLS_REPO_TOKEN
           command: |
-            sh -c env
-            export COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
+            bash -c env
+            echo 'export COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN' >> $BASH_ENV
+            bash -c env
       - run:
           name: Install dependencies
           command: npm install
