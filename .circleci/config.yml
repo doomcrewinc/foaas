@@ -5,26 +5,22 @@ jobs:
     docker:
       - image: cimg/node:23.11.0
     environment:
-      COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
+      COVERALLS_REPO_TOKEN: ${COVERALLS_REPO_TOKEN}
     steps:
       - checkout
-
       - restore_cache:
           keys:
             # primary key: based on lockfile checksum
             - v1-deps-{{ checksum "package-lock.json" }}
             # fallback: any v1-deps cache
             - v1-deps-
-
       - run:
           name: Install dependencies
           command: npm install
-
       - save_cache:
           paths:
             - node_modules
           key: v1-deps-{{ checksum "package-lock.json" }}
-
       - run:
           name: Run tests & coverage
           command: npm test
