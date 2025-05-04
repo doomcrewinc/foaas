@@ -2,7 +2,7 @@
 
 *May 2025 - v2.3.6*
 
-[![Build Status](https://travis-ci.com/doomcrewinc/foaas.svg?branch=master)](https://travis-ci.org/doomcrewinc/foaas) [![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/doomcrewinc/foaas?branch=master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/doomcrewinc/foaas/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/doomcrewinc/foaas/tree/master) [![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/doomcrewinc/foaas?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/doomcrewinc/foaas?branch=master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
