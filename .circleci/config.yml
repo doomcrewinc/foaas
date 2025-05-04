@@ -14,6 +14,7 @@ jobs:
             - v1-deps-{{ checksum "package-lock.json" }}
             # fallback: any v1-deps cache
             - v1-deps-
+      - run: sh -c env
       - run:
           name: Install dependencies
           command: npm install
