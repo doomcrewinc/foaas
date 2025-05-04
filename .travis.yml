@@ -1,4 +1,24 @@
+---
+os: linux
+dist: jammy
+
 language: node_js
 node_js:
-  - "10.0.0"
-sudo: false
+  - "23.0.0"
+cache:
+  directories: ~/.npm
+
+before_script: npm install -g npm@latest
+
+env:
+  global:
+    - COVERALLS_PARALLEL=true
+
+install: npm ci
+
+jobs:
+  include:
+    - script: npm test && COVERALLS_FLAG_NAME=foaas-test npm run upload-coverage
+
+notifications:
+  webhooks: https://coveralls.io/webhook
