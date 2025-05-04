@@ -1,6 +1,6 @@
 # FOAAS
 
-*May 2025 - v2.3.3*
+*May 2025 - v2.3.6*
 
 [![Build Status](https://travis-ci.com/doomcrewinc/foaas.svg?branch=master)](https://travis-ci.org/doomcrewinc/foaas) [![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/doomcrewinc/foaas?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/doomcrewinc/foaas?branch=master)
