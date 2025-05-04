@@ -2,8 +2,8 @@
 
 *May 2025 - v2.3.3*
 
-[![Build Status](https://travis-ci.org/tomdionysus/foaas.svg?branch=master)](https://travis-ci.org/tomdionysus/foaas) [![Coverage Status](https://coveralls.io/repos/github/tomdionysus/foaas/badge.svg?branch=master)](https://coveralls.io/github/tomdionysus/foaas?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/tomdionysus/foaas/badge.svg?branch=master)](https://coveralls.io/github/tomdionysus/foaas?branch=master)
+[![Build Status](https://travis-ci.com/doomcrewinc/foaas.svg?branch=master)](https://travis-ci.org/tomdionysus/foaas) [![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/tomdionysus/foaas?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/tomdionysus/foaas?branch=master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 FOAAS (Fuck Off As A Service) provides a modern, RESTful, scalable solution to the common problem of telling people to fuck off.
