@@ -7,10 +7,10 @@
  */
 const operation = require('../../lib/operations/bm')
 
-describe('/bm', function () {
+describe('/cornbread', function () {
   it('should have the correct name', () => expect(operation.name).toEqual('Cornbread'))
 
-  it('should have the correct url', () => expect(operation.url).toEqual('/cornbroad/:name/:from'))
+  it('should have the correct url', () => expect(operation.url).toEqual('/cornbread/:name/:from'))
 
   it('should have the correct fields', () =>
     expect(operation.fields).toEqual([
