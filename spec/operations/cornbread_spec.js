@@ -5,15 +5,16 @@
  * DS102: Remove unnecessary code created because of implicit returns
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-const operation = require('../../lib/operations/bye')
+const operation = require('../../lib/operations/cornbread')
 
-describe('/bye', function () {
-  it('should have the correct name', () => expect(operation.name).toEqual('Bye'))
+describe('/cornbread', function () {
+  it('should have the correct name', () => expect(operation.name).toEqual('Cornbread'))
 
-  it('should have the correct url', () => expect(operation.url).toEqual('/bye/:from'))
+  it('should have the correct url', () => expect(operation.url).toEqual('/cornbread/:name/:from'))
 
   it('should have the correct fields', () =>
     expect(operation.fields).toEqual([
+      { name: 'Name', field: 'name' },
       { name: 'From', field: 'from' }
     ])
   )
@@ -25,7 +26,7 @@ describe('/bye', function () {
 
       operation.register(app, null)
 
-      expect(app.get).toHaveBeenCalledWith('/bye/:from', jasmine.any(Function))
+      expect(app.get).toHaveBeenCalledWith('/cornbread/:name/:from', jasmine.any(Function))
     })
 
     return it('should call output with correct params', function () {
@@ -37,15 +38,18 @@ describe('/bye', function () {
 
       const req = {
         params: {
+          name: 'TESTNAME',
           from: 'TESTFROM'
         }
       }
 
-      const message = 'Fuckity bye-bye!'
-      const subtitle = `- ${req.params.from}`
-
       func(req, 'RES')
-      return expect(output).toHaveBeenCalledWith(req, 'RES', message, subtitle)
+      return expect(output).toHaveBeenCalledWith(
+        req,
+        'RES',
+        'What in the cornbread fuck, TESTNAME?',
+        '- TESTFROM'
+      )
     })
   })
 })
