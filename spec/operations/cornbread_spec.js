@@ -5,7 +5,7 @@
  * DS102: Remove unnecessary code created because of implicit returns
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-const operation = require('../../lib/operations/bm')
+const operation = require('../../lib/operations/cornbread')
 
 describe('/cornbread', function () {
   it('should have the correct name', () => expect(operation.name).toEqual('Cornbread'))
