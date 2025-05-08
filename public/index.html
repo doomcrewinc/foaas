@@ -9,16 +9,33 @@
     <meta name="og:title" content="Fuck Off As A Service">
     <meta name="og:description" content="FOAAS provides a modern, RESTful, scalable solution to the common problem of telling people to fuck off.">
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $(function(){
-            $.ajax({
-                url: '/fucks',
-                success: function(data) {
-                    $('#fucks').append(data);
-                }
-            })
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <script>
+      $(function(){
+        $.ajax({
+          url: '/fucks',
+          dataType: 'html',
+          success: function(data) {
+            var nodes = $.parseHTML(data, document, /*keepScripts*/ false) || [];
+            var $tbody = $('#fucks tbody').empty();
+            nodes.forEach(function(node) {
+              if (node.nodeType === Node.ELEMENT_NODE && node.tagName.toLowerCase() === 'tr') {
+                var $newRow = $('<tr>');
+                $(node).children('td, th').each(function() {
+                  var tag = this.tagName.toLowerCase();
+                  var text = $(this).text();
+                  $newRow.append( $('<' + tag + '>').text(text) );
+                });
+                $tbody.append($newRow);
+              }
+            });
+          },
+          error: function(_, status, err) {
+            console.error('Fetch error:', err);
+          }
         });
+      });
     </script>
   </head>
 
@@ -56,21 +73,23 @@
         <h3 id="operations">Operations</h3>
 
         <table class="table" id="fucks">
-            <tr>
-                <th>Path</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>/version</td>
-                <td>Will return content with the current FOAAS version number.</td>
-            </tr>
-
-            <tr>
-                <td>/operations</td>
-                <td>Will return a JSON list of operations with names and fields. <em>Note: JSON Only</em></td>
-            </tr>
-
-
+          <thead>
+          <tr>
+            <th>Path</th>
+            <th>Description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- keep your static rows here: -->
+          <tr>
+            <td>/version</td>
+            <td>Will return content with the current FOAAS version number.</td>
+          </tr>
+          <tr>
+            <td>/operations</td>
+            <td>Will return a JSON list of operations with names and fields. <em>Note: JSON Only</em></td>
+          </tr>
+          </tbody>
         </table>
 
         <h3 id="filters">Filters</h3>
