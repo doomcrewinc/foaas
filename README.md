@@ -1,8 +1,10 @@
 # FOAAS
 
-*May 2025 - v2.3.6*
+*May 2025 - v2.3.8*
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/doomcrewinc/foaas/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/doomcrewinc/foaas/tree/master) [![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/doomcrewinc/foaas?branch=master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/doomcrewinc/foaas/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/doomcrewinc/foaas/tree/master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=doomcrewinc_foaas&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=doomcrewinc_foaas)
+[![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/doomcrewinc/foaas?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/doomcrewinc/foaas/badge.svg?branch=master)](https://coveralls.io/github/doomcrewinc/foaas?branch=master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 

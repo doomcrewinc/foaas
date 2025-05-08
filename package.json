@@ -1,6 +1,6 @@
 {
   "name": "foaas",
-  "version": "2.3.7",
+  "version": "2.3.8",
   "description": "Fuck Off As A Service",
   "main": "lib/server.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "i18next-http-middleware": "^3.7.4",
     "md5": "^2.3.0",
     "method-override": "^3.0.0",
-    "request": "^2.88.2",
+    "@cypress/request": "3.0.8",
     "sanitizer": "^0.1.3",
     "underscore": "^1.13.7",
     "xml-escape": "^1.1.0"
