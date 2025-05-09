@@ -1,6 +1,6 @@
 # FOAAS
 
-*May 2025 - v2.3.8*
+*May 2025 - v2.4.0*
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/doomcrewinc/foaas/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/doomcrewinc/foaas/tree/master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=doomcrewinc_foaas&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=doomcrewinc_foaas)

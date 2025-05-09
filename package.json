@@ -1,6 +1,6 @@
 {
   "name": "foaas",
-  "version": "2.3.8",
+  "version": "2.4.0",
   "description": "Fuck Off As A Service",
   "main": "lib/server.js",
   "scripts": {
