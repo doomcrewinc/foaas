@@ -19,7 +19,7 @@
     "body-parser": "^2.2.0",
     "compression": "^1.8.0",
     "express": "^5.1.0",
-    "i18next": "^25.0.2",
+    "i18next": "^25.1.2",
     "i18next-http-middleware": "^3.7.4",
     "md5": "^2.3.0",
     "method-override": "^3.0.0",
