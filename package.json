@@ -12,7 +12,7 @@
   "license": "WTFPL",
   "devDependencies": {
     "coveralls-next": "4.2.1",
-    "jasmine": "^5.7.1",
+    "jasmine": "^5.8.0",
     "nyc": "^17.1.0"
   },
   "dependencies": {
