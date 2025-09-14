@@ -20,7 +20,7 @@
     "compression": "^1.8.1",
     "express": "^5.1.0",
     "i18next": "^25.1.2",
-    "i18next-http-middleware": "^3.7.4",
+    "i18next-http-middleware": "^3.8.0",
     "md5": "^2.3.0",
     "method-override": "^3.0.0",
     "@cypress/request": "3.0.9",
