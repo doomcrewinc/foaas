@@ -11,7 +11,7 @@
   "author": "Tom Cully / doomcrewinc",
   "license": "WTFPL",
   "devDependencies": {
-    "coveralls-next": "5.0.0",
+    "coveralls-next": "6.0.1",
     "jasmine": "^5.9.0",
     "nyc": "^17.1.0"
   },
