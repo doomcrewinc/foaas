@@ -17,11 +17,11 @@
   },
   "dependencies": {
     "@cypress/request": "3.0.9",
-    "body-parser": "^2.2.0",
+    "body-parser": "^2.2.1",
     "compression": "^1.8.1",
     "envalid": "^8.1.0",
     "express": "^5.1.0",
-    "express-validator": "^7.2.1",
+    "express-validator": "^7.3.0",
     "i18next": "^25.4.1",
     "i18next-http-middleware": "^3.8.0",
     "md5": "^2.3.0",
