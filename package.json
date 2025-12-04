@@ -12,7 +12,7 @@
   "license": "WTFPL",
   "devDependencies": {
     "coveralls-next": "5.0.0",
-    "jasmine": "^5.9.0",
+    "jasmine": "^5.11.0",
     "nyc": "^17.1.0"
   },
   "dependencies": {
@@ -22,7 +22,7 @@
     "envalid": "^8.1.0",
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
-    "i18next": "^25.4.1",
+    "i18next": "^25.5.3",
     "i18next-http-middleware": "^3.8.1",
     "md5": "^2.3.0",
     "method-override": "^3.0.0",
