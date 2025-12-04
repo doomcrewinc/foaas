@@ -28,5 +28,8 @@ jobs:
           npm install
 
       - name: Run tests
-        run: |
-          npm test
+        run: npm test
+
+      - name: Upload coverage to Coveralls
+        run: npm run coverage
+        continue-on-error: true
