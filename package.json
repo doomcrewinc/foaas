@@ -24,7 +24,7 @@
     "express": "^5.1.0",
     "express-validator": "^7.3.0",
     "i18next": "^25.6.2",
-    "i18next-http-middleware": "^3.8.1",
+    "i18next-http-middleware": "^3.8.2",
     "md5": "^2.3.0",
     "method-override": "^3.0.0",
     "sanitizer": "^0.1.3",
