@@ -17,7 +17,7 @@
     "nyc": "^17.1.0"
   },
   "dependencies": {
-    "@cypress/request": "3.0.9",
+    "@cypress/request": "3.0.10",
     "body-parser": "^2.2.1",
     "compression": "^1.8.1",
     "envalid": "^8.1.1",
