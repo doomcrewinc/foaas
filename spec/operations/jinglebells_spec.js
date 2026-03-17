@@ -7,7 +7,7 @@
  */
 const operation = require('../../lib/operations/jinglebells')
 
-describe('/ing', function () {
+describe('/jinglebells', function () {
   it('should have the correct name', () => expect(operation.name).toEqual('Jingle Bells'))
 
   it('should have the correct url', () => expect(operation.url).toEqual('/jinglebells/:from'))
