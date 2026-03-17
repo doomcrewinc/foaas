@@ -13,6 +13,22 @@
     <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
     <script>
       $(function(){
+        // Fetch version
+        $.ajax({
+          url: '/version',
+          headers: { 'Accept': 'text/plain' },
+          dataType: 'text',
+          success: function(data) {
+            // Extract version number from response like "Version 20260316-a33ab98 FOAAS"
+            var version = data.split('\n')[0].replace('Version ', '').replace(' FOAAS', '').trim();
+            $('#version').text('v' + version);
+          },
+          error: function(_, status, err) {
+            console.error('Version fetch error:', err);
+          }
+        });
+
+        // Fetch operations table
         $.ajax({
           url: '/fucks',
           dataType: 'html',
@@ -44,7 +60,7 @@
       <div class="hero-unit">
         <h1>FOAAS</h1>
         <h2>Fuck Off As A Service</h2>
-        <p><em>v2.4.0</em></p>
+        <p><em id="version">Loading...</em></p>
       </div>
     </div>
     <div class="container">
