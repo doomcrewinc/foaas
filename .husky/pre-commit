@@ -1,0 +1,42 @@
+#!/usr/bin/env sh
+
+# Auto-update version to CalVer+ShortSHA format (YYYYMMDD-SHA)
+
+# Get current date in YYYYMMDD format
+DATE=$(date +%Y%m%d)
+
+# Get previous commit short SHA (HEAD if exists, otherwise use initial)
+if git rev-parse --verify HEAD >/dev/null 2>&1; then
+  SHA=$(git rev-parse --short HEAD)
+else
+  # For initial commit, use placeholder
+  SHA="initial"
+fi
+
+# New version
+NEW_VERSION="${DATE}-${SHA}"
+
+# Get current version from package.json
+CURRENT_VERSION=$(node -p "require('./package.json').version")
+
+# Only update if version has changed
+if [ "$CURRENT_VERSION" != "$NEW_VERSION" ]; then
+  echo "Updating version: $CURRENT_VERSION → $NEW_VERSION"
+
+  # Update package.json version using Node
+  node -e "
+    const fs = require('fs');
+    const pkg = require('./package.json');
+    pkg.version = '$NEW_VERSION';
+    fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+  "
+
+  # Update package-lock.json
+  npm install --package-lock-only --silent
+
+  # Stage the updated files
+  git add package.json package-lock.json
+fi
+
+# Run tests
+npm test

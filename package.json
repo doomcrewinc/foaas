@@ -1,18 +1,20 @@
 {
   "name": "foaas",
-  "version": "2.4.0",
+  "version": "20260316-a33ab98",
   "description": "Fuck Off As A Service",
   "main": "lib/server.js",
   "scripts": {
     "start": "node lib/server.js",
     "test": "nyc --reporter=lcov --exclude=spec jasmine",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "prepare": "husky"
   },
   "repository": "git@github.com:doomcrewinc/foaas",
   "author": "Tom Cully / doomcrewinc",
   "license": "WTFPL",
   "devDependencies": {
     "coveralls-next": "6.0.1",
+    "husky": "^9.1.7",
     "jasmine": "^6.0.0",
     "nyc": "^17.1.0"
   },
