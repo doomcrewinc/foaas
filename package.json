@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "@cypress/request": "4.0.1",
-    "body-parser": "^2.3.0",
-    "compression": "^1.8.1",
+    "body-parser": "^2.4.0",
+    "compression": "^1.8.2",
     "envalid": "^8.2.0",
     "express": "^5.2.1",
     "express-validator": "^7.3.2",
